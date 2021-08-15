@@ -1,4 +1,4 @@
-#    Copyright (C) 2021 - Avishkar Patil | @AvishkarPatil
+#    Copyright (C) 2021 - 
 
 
 import os
@@ -37,7 +37,7 @@ bot = Client(
 
 
 START_TEXT = """
- *Assalamu alaikum* I am__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ** \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
+ **Assalamu alaikum** I am__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ** \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
 """
 HELP_TEXT = """
 **MrAɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__*
