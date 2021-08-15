@@ -1,4 +1,4 @@
-#    Copyright (C) 2021 - Avishkar Patil | @AvishkarPatil
+#    Copyright (C) 2021 - MrAnon
 
 
 import os
@@ -37,13 +37,16 @@ bot = Client(
 
 
 START_TEXT = """
-__**Assalamu alaikum** I'ᴍ__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ**\n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
+__Assalamu alaikum I'ᴍ__ **AɴᴏɴFɪʟᴇsBᴏᴛ** 😎 \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @mrbotslist**
 """
 HELP_TEXT = """
-**MrAɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__**
+**AɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @mrbotslist**
 """
 ABOUT_TEXT = """
 - **Bot :** `MrAnonFilesBot`
+- **Creator :** [MrAnonFiles](https://telegram.me/mrbotslist)
+
+__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @mrbotslist
 """
 
 START_BUTTONS = InlineKeyboardMarkup(
@@ -112,7 +115,7 @@ async def upload(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.chat.id,
-                    text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ! ** .",
+                    text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ! Cᴏɴᴛᴀᴄᴛ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/mrbotslist).",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -120,7 +123,7 @@ async def upload(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.chat.id,
-                text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ**",
+                text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ 🏃‍♂**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -130,7 +133,14 @@ async def upload(client, message):
                 ),
                 parse_mode="markdown"
             )
-            retur
+            return
+        except Exception:
+            await client.send_message(
+                chat_id=message.chat.id,
+                text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ! Cᴏɴᴛᴀᴄᴛ ᴍʏ** [Dᴇᴠᴇʟᴏᴘᴇʀ](https://telegram.me/mrbotslist).",
+                parse_mode="markdown",
+                disable_web_page_preview=True)
+            return
     m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ Yᴏᴜʀ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** ")
     now = time.time()
     sed = await bot.download_media(
@@ -148,7 +158,7 @@ async def upload(client, message):
         callapi = requests.post("https://api.anonfiles.com/upload", files=files)
         text = callapi.json()
         output = f"""
-<u>**Fɪʟᴇ Uᴘʟᴏᴀᴅᴇᴅ Tᴏ AɴᴏɴFɪʟᴇs**</u>
+<u>**Fɪʟᴇ Uᴘʟᴏᴀᴅᴇᴅ Tᴏ MrAɴᴏɴFɪʟᴇs**</u>
 
 **📂 Fɪʟᴇ Nᴀᴍᴇ:** {text['data']['file']['metadata']['name']}
 
@@ -156,7 +166,7 @@ async def upload(client, message):
 
 **📥Dᴏᴡɴʟᴏᴀᴅ Lɪɴᴋ:** `{text['data']['file']['url']['full']}`
 
-🔅"""
+🔅__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :** @mrbotslist**"""
         btn = InlineKeyboardMarkup(
                                 [[InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ Fɪʟᴇ", url=f"{text['data']['file']['url']['full']}")]])
         await m.edit(output, reply_markup=btn)
@@ -169,7 +179,7 @@ async def upload(client, message):
 async def url(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     lenk = message.text
-    cap = "© @AvishkarPatil"
+    cap = "© @mrbotslist"
     thumb = "./thumb.jpg"
     try:
          await msg.edit("**Bɪɢ Fɪʟᴇs Wɪʟʟ Tᴀᴋᴇ Mᴏʀᴇ Tɪᴍᴇ, Dᴏɴ'ᴛ Pᴀɴɪᴄ!**")
@@ -194,5 +204,5 @@ async def download(url):
         
         
 bot.start()
-print("AnonFilesBot Is Started!,  if Have Any Problems")
+print("AnonFilesBot Is Started!,  if Have Any Problems contact @mrbotslist")
 idle()
