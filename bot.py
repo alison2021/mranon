@@ -30,7 +30,7 @@ BOT_TOKEN = Config.BOT_TOKEN
 
    
 bot = Client(
-    "MrAnonFilesBot",
+    "AnonFilesBot",
     api_id=APP_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN)
@@ -204,5 +204,5 @@ async def download(url):
         
         
 bot.start()
-print("MrAnonFilesBot Is Started!,  if Have Any Problems contact @mrbotslist")
+print("AnonFilesBot Is Started!,  if Have Any Problems contact @mrbotslist")
 idle()
