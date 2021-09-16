@@ -1,4 +1,4 @@
-#    Copyright (C) 2021 - mrbotlist | @mrbotslist
+#    Copyright (C) 2021 - Avishkar Patil | @AvishkarPatil
 
 
 import os
@@ -37,7 +37,7 @@ bot = Client(
 
 
 START_TEXT = """
- **Assalamu alaikum** I am__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ** \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
+ *Assalamu alaikum* I am__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ** \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
 """
 HELP_TEXT = """
 **MrAɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__*
@@ -90,47 +90,7 @@ async def cb_data(bot, update):
             disable_web_page_preview=True,
             reply_markup=ABOUT_BUTTONS
         )
-    else:
-        await update.message.delete()
-        
-        
-@bot.on_message(filters.private & filters.command(["start"]))
-async def start(bot, update):
-    text = START_TEXT
-    reply_markup = START_BUTTONS
-    await update.reply_text(
-        text=text,
-        disable_web_page_preview=True,
-        reply_markup=reply_markup
-    )
-
-      
-@bot.on_message(filters.media & filters.private)
-async def upload(client, message):
-    if Config.UPDATES_CHANNEL is not None:
-        try:
-            user = await client.get_chat_member(Config.UPDATES_CHANNEL, message.chat.id)
-            if user.status == "kicked":
-                await client.send_message(
-                    chat_id=message.chat.id,
-                    text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ!**"
-                    parse_mode="markdown",
-                    disable_web_page_preview=True
-                )
-                return
-        except UserNotParticipant:
-            await client.send_message(
-                chat_id=message.chat.id,
-                text="**Pʟᴇᴀsᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ Tᴏ Usᴇ Mᴇ **",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ", url=f"https://t.me/{Config.UPDATES_CHANNEL}")
-                        ]
-                    ]
-                ),
-                parse_mode="markdown"
-            )
+ 
             return
         except Exception:
             await client.send_message(
