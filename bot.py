@@ -137,7 +137,7 @@ async def upload(client, message):
                 chat_id=message.chat.id,
                 text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ!**",
                 parse_mode="markdown",
-                disable_web_page_preview=False)
+                disable_web_page_preview=True)
             return
     m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ Yᴏᴜʀ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** ")
     now = time.time()
