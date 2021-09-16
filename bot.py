@@ -44,7 +44,7 @@ HELP_TEXT = """
 """
 ABOUT_TEXT = """
 - **Bot :** `MrAnonFilesBot`
-- **Creator :** [Mrbots] (https://mrbotslist)
+- **Creator :** [Mrbots](https://mrbotslist)
 
 __MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ : @mrbotslist
 """
