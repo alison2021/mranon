@@ -43,8 +43,8 @@ HELP_TEXT = """
 **MrAɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ :@mrbotslist
 """
 ABOUT_TEXT = """
-- **Bot :** `AnonFilesBot`
-- **Creator :** [Mrbots](https://mrbotslist)
+- **Bot :** `MrAnonFilesBot`
+- **Creator :** [Mrbots] (https://mrbotslist)
 
 __MᴀɪɴTᴀɪɴᴇᴅ Bʏ__ : @mrbotslist
 """
