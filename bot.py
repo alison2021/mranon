@@ -1,4 +1,4 @@
-#    Copyright (C) 2021 - Avishkar Patil | @AvishkarPatil
+#    Copyright (C) 2021 - mrbotlist | @mrbotslist
 
 
 import os
@@ -37,7 +37,7 @@ bot = Client(
 
 
 START_TEXT = """
- *Assalamu alaikum* I am__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ** \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
+ **Assalamu alaikum** I am__ **MrAɴᴏɴFɪʟᴇsBᴏᴛ** \n\n__I Cᴀɴ Uᴘʟᴏᴀᴅ Fɪʟᴇs Tᴇʟᴇɢʀᴀ Tᴏ AɴᴏɴFɪʟᴇs__\n\n__
 """
 HELP_TEXT = """
 **MrAɴᴏɴFɪʟᴇsBᴏᴛ Hᴇʟᴘ**\n\n__Sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ ғɪʟᴇ, I'ʟʟ ᴜᴘʟᴏᴀᴅ ɪᴛ ᴛᴏ ᴀɴᴏɴғɪʟᴇs.ᴄᴏᴍ ᴀɴᴅ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ__\n\n__*
@@ -115,7 +115,7 @@ async def upload(client, message):
                     chat_id=message.chat.id,
                     text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ!**"
                     parse_mode="markdown",
-                    disable_web_page_preview=True
+                    disable_web_page_preview=False
                 )
                 return
         except UserNotParticipant:
@@ -137,7 +137,7 @@ async def upload(client, message):
                 chat_id=message.chat.id,
                 text="**Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ Wʀᴏɴɢ!**",
                 parse_mode="markdown",
-                disable_web_page_preview=True)
+                disable_web_page_preview=False)
             return
     m = await message.reply("**Dᴏᴡɴʟᴏᴀᴅɪɴɢ Yᴏᴜʀ FIʟᴇs Tᴏ Mʏ Sᴇʀᴠᴇʀ ....** ")
     now = time.time()
