@@ -115,7 +115,7 @@ async def upload(client, message):
                     chat_id=message.chat.id,
                     text="**Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ Bᴀɴɴᴇᴅ ᴛᴏ ᴜsᴇ ᴍᴇ!**"
                     parse_mode="markdown",
-                    disable_web_page_preview=False
+                    disable_web_page_preview=True
                 )
                 return
         except UserNotParticipant:
